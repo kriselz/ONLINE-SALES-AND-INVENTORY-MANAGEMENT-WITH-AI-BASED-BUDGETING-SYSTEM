@@ -1,24 +1,25 @@
 # ONLINE-SALES-AND-INVENTORY-MANAGEMENT-WITH-AI-BASED-BUDGETING-SYSTEM
 
-The Online Sales and Inventory Management with AI-Based Budgeting System automates pharmacy sales, online medicine ordering, and inventory management. It is designed for customers, pharmacists, administrators, and pharmacy owners to improve operational efficiency, accuracy, and product availability. AI-assisted analysis of sales, inventory, and financial data helps support budgeting and purchasing decisions.
+The Online Sales and Inventory Management with AI-Based Budgeting System is designed to automate pharmacy sales transactions, online medicine ordering, and inventory management. It is intended for customers, pharmacists, administrators, and pharmacy owners to improve operational efficiency, accuracy, and product availability. The system also uses AI to analyze sales, inventory, and financial data to provide budgeting recommendations, support purchasing decisions, reduce operational costs, and improve business management.
 
 ---
 
 ## Group Members & Roles
 * **Imperial, Rhea** – Documentation
-* **Gliocam, Jomar B.** – Documentation
+* **Gliocam, Jomar B.** –Documentation
 * **Sabdao, John Rey V.** – Backend / Database Administrator
 * **Sumunod, Criselle B.** – Frontend / UI-UX Developer / Documentation
-* **Ybut, John Eddie F.** – Documentation
+* **Ybut, John Eddie F..** – Documentation
 
 ---
 
 ## Tech Stack
-* **Frontend:** HTML, CSS, JavaScript
-* **Backend:** PHP
-* **Database:** MySQL
-* **Tools & Version Control:** Git, GitHub, VS Code, XAMPP, Composer
-* **Libraries / Integrations:** PHPMailer, Google API Client, optional Gemini API integration
+* **Frontend:** [HTML, CSS, JavaScript]
+* **Backend:** [PHP]
+* **Database:** [MySQL]
+* **Tools & Version Control:** Git, GitHub, VS Code, XAMPP, Composer]
+* **Libraries / Integrations:** GPHPMailer, Google API Client, at Gemini API]
+
 
 ---
 
@@ -28,24 +29,22 @@ Before you begin, ensure you have the following installed on your local machine:
 * XAMPP (Apache and MySQL) or equivalent
 * Composer
 * Git
-* A modern web browser
-
 ---
 
 ## Installation & Setup Instructions
 
-Follow these step-by-step commands to set up the project locally:
-
 ### 1. Clone the Repository
-Replace `your-username` with the GitHub username that owns the public repository:
 
 ```bash
-git clone https://github.com/your-username/ONLINE-SALES-AND-INVENTORY-MANAGEMENT-WITH-AI-BASED-BUDGETING-SYSTEM.git
-cd ONLINE-SALES-AND-INVENTORY-MANAGEMENT-WITH-AI-BASED-BUDGETING-SYSTEM
+git clone https://github.com/<your-username>/<your-repository-name>.git
+cd <your-repository-name>
 ```
 
+Replace the URL and folder name with the values for your public repository.
+
 ### 2. Install Dependencies
-The Composer files are located in the `owner` and `user` directories:
+
+Composer manifests are located in the `owner` and `user` directories:
 
 ```bash
 cd owner
@@ -64,54 +63,52 @@ Follow these steps to configure your local database:
 1. **Start your local database server** (e.g., open XAMPP and start **Apache** and **MySQL**).
 2. **Create a new database:**
    * Open phpMyAdmin (`http://localhost/phpmyadmin`) or your database client.
-   * Create a new database named `admin_dashboard_system`.
+   * Create a new database named: `admin_dashboard_system` (Match this with your `.env` configuration).
 3. **Import the Database Schema:**
    * Select the database you created and import the repository's `system.sql` file.
    * The SQL file creates the tables; it does not create or select a database.
-4. **Configure Database Connection:**
-   * The project reads configuration from environment variables or a private `deployment-config.php` file in the project root.
-   * For a default local XAMPP setup, use:
-
-     ```text
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_NAME=admin_dashboard_system
-     DB_USER=root
-     DB_PASSWORD=
+4. **Configure Environment Variables:**
+   *Open the .env file in the root directory. The project reads configuration settings from environment variables or a private deployment-config.php file located in the project root.
+   *Update the database connection, email (SMTP), and Gemini API settings using your own credentials. 
+    *Save the changes before running the system.
      ```
-
-   * If you use different database settings, configure the matching values in your environment or private configuration file. Do not commit credentials to GitHub.
-5. **Optional product catalog:** If importing `products.csv`, import it into the `products` table and upload the referenced product images. Remove demo or test products before using the catalog for real sales.
-
+    'APP_ENV' => 'development',
+    'APP_BASE_URL' => 'http://localhost/capstone',
+    'DB_HOST' => 'localhost',
+    'DB_PORT' => '3306',
+    'DB_NAME' => 'admin_dashboard_system',
+    'DB_USER' => 'root',
+    'SMTP_HOST' => 'smtp.gmail.com',
+    'SMTP_PORT' => '587',
+    'SMTP_ENCRYPTION' => 'tls',
+    'SMTP_USERNAME' => 'yourgmail@gmail.com',
+    'SMTP_PASSWORD' => 'your-app-password',
+    'SMTP_FROM_EMAIL' => 'yourgmail@gmail.com',
+    'SMTP_FROM_NAME' => 'Josefina Farmacia',
+    'GEMINI_API_KEY' => 'api-key',
+     ```
 ---
 
-## Running the Application
+### Running the Application
 
-Place the project folder inside XAMPP's `htdocs` directory. Start Apache and MySQL, then open the relevant page:
+1. Open the XAMPP Control Panel.
+2. Start Apache and MySQL.
+3. Make sure the project folder is located inside the `htdocs` directory.
+4. Open your browser and navigate to:
 
-* **Application:** `http://localhost/<project-folder>/`
-* **Customer registration:** `http://localhost/<project-folder>/user/register.php`
-* **Owner sign-in:** `http://localhost/<project-folder>/owner/login_a.php`
-* **Pharmacist sign-in:** `http://localhost/<project-folder>/owner/pharmacist_login.php`
-* **Rider sign-in:** `http://localhost/<project-folder>/rider/rider_login.php`
+- Customer Website: `http://localhost/capstone`
+- phpMyAdmin: `http://localhost/phpmyadmin`
 
-This is a PHP application and runs through Apache; `php artisan serve` and `npm run dev` do not apply. The root URL redirects to the owner homepage.
+5\. The system is now ready to use.
 
+Note: Make sure the project database has been imported into phpMyAdmin before running the application.
 ---
 
 ## Default Login Credentials (If applicable)
+* **Admin Account:** `admin` / `admin123!`
+* **Customer Account: ** `login-your-gmail`
+* **Rider Account: ** `rider` / `rider123!`
+* **Pharmacist Account: ** `Pharmacist`/ `rider123!`
 
-The database does not contain pre-created accounts, so the project has no default usernames or passwords. Create test accounts using the steps below; each account's username/email and password are the values entered during its creation.
 
-| **User / Customer** | Register at `/user/register.php`. | `/user/login.php` |
-| **Admin** | Register an account, then select the project database in phpMyAdmin and run the SQL below with that account's email. | `/owner/login_a.php` |
-| **Pharmacist** | Sign in as admin and create an account from the **Pharmacy Staff** section. This creates the required pharmacist staff record. | `/owner/pharmacist_login.php` |
-| **Rider** | Sign in as admin and create an account from the **Rider Accounts** section. | `/rider/rider_login.php` |
 
-```sql
-UPDATE users
-SET role = 'admin'
-WHERE email = 'your-email@example.com';
-```
-
-Replace `your-email@example.com` with the email used to register the test admin. 
