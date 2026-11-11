@@ -1,0 +1,202 @@
+:root {
+    --appearance-accent: #8d2638;
+    --appearance-font-scale: 1;
+}
+
+.sidebar a.active,
+.sidebar .settings-toggle.active,
+.pagination .active:not(.disabled),
+.pagination-btn.active,
+.stock-pagination .active,
+.sales-pagination .active,
+.customer-pagination .active,
+.reports-tab.active,
+.page-tab.active,
+.period-btn.active,
+.inventory-tab-button[aria-selected="true"],
+.tab.active,
+.pager-link.active,
+.inventory-pager-link.active,
+.sales-pager-link.active,
+.btn-primary,
+.primary-button,
+.button-primary,
+.add-btn:not(:hover),
+.add-button,
+.btn-save,
+.submit-btn,
+.btn-checkout,
+.transaction-search-button,
+.export-btn,
+.export-button,
+.btn-submit,
+.apply-date-filter,
+.custom-date-range button,
+.sales-custom-date-range button {
+    background-color: var(--appearance-accent) !important;
+    border-color: var(--appearance-accent) !important;
+}
+
+.sidebar .owner-topbar-title,
+.customer-topbar-title,
+.owner-topbar-title,
+.transaction-export-button,
+.reports-tab:hover,
+.page-tab:hover,
+.pagination a:not(.active):hover,
+.pagination-btn:not(.active):hover,
+.stock-pagination a:not(.active):hover,
+.sales-pagination a:not(.active):hover,
+.customer-pagination a:not(.active):hover,
+.inventory-tab-button:hover,
+.tab:not(.active):hover,
+.pager-link:not(.active):hover,
+.inventory-pager-link:not(.active):hover,
+.sales-pager-link:not(.active):hover,
+.continue-link,
+.clear-cart-btn,
+.btn-orders,
+.price-col,
+.price-col .price-subtext,
+.total-col,
+.summary-line.total .price,
+.qty-btn:not(:disabled),
+.delete-btn,
+.transaction-export-button:hover,
+.inventory-search-button:hover,
+.inventory-camera-button:hover {
+    color: var(--appearance-accent) !important;
+}
+
+.btn-orders,
+.clear-cart-btn,
+.transaction-export-button,
+.pagination a:not(.active):hover,
+.pagination-btn:not(.active):hover,
+.stock-pagination a:not(.active):hover,
+.sales-pagination a:not(.active):hover,
+.customer-pagination a:not(.active):hover,
+.pager-link:not(.active):hover,
+.inventory-pager-link:not(.active):hover,
+.sales-pager-link:not(.active):hover {
+    border-color: var(--appearance-accent) !important;
+}
+
+.metric-card.average,
+.metric-card:first-child,
+.summary-card-link:hover,
+.inventory-tab-button[aria-selected="true"] {
+    border-color: var(--appearance-accent) !important;
+}
+
+.tab.active,
+.inventory-tab-button[aria-selected="true"] {
+    border-bottom-color: var(--appearance-accent) !important;
+}
+
+.notification-icon,
+.notification-item.unread .status-dot {
+    color: var(--appearance-accent) !important;
+    background-color: color-mix(in srgb, var(--appearance-accent) 10%, white) !important;
+}
+
+.notification-item.unread .status-dot {
+    background-color: var(--appearance-accent) !important;
+}
+
+.notification-item:hover,
+.notification-item.unread {
+    border-color: color-mix(in srgb, var(--appearance-accent) 35%, white) !important;
+}
+
+.appearance-accent,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline-color: var(--appearance-accent);
+}
+
+.theme-option.active {
+    border-color: var(--appearance-accent) !important;
+    box-shadow: 0 0 0 1px var(--appearance-accent) !important;
+}
+
+.theme-option i,
+.font-size-range {
+    color: var(--appearance-accent);
+    accent-color: var(--appearance-accent);
+}
+
+.mode-toggle input:checked + .mode-slider {
+    background-color: var(--appearance-accent);
+}
+
+.product-info .unit-select:hover,
+.product-info .unit-select:focus,
+.notification-item:focus-visible,
+.filter-select:focus,
+.filter-input:focus {
+    border-color: var(--appearance-accent) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--appearance-accent) 15%, transparent) !important;
+}
+
+.report-rank,
+.sales-rank {
+    color: var(--appearance-accent) !important;
+}
+
+body.dark-mode {
+    color-scheme: dark;
+    background: #1c1f24 !important;
+    color: #e5e7eb !important;
+}
+
+body.dark-mode :is(.content, .main-content, .main-wrapper, .admin-page, .page-content, .settings-main, main) {
+    background-color: transparent !important;
+    color: #e5e7eb !important;
+}
+
+body.dark-mode :is(.customer-topbar, .owner-topbar, .panel, .card, .content-card, .orders-panel, .settings-section, .settings-card, .appearance-card, .modal-content, .modal-dialog, .table-wrap, .table-scroll, .table-responsive, .toolbar, .filter-bar, .filters, .filter-panel, .search-filter-group, .notification-group, .notif-card, .order-box) {
+    background-color: #292d33 !important;
+    color: #e5e7eb !important;
+    border-color: #414750 !important;
+}
+
+body.dark-mode :is(h1, h2, h3, h4, p, label, legend, th, td, .section-title, .page-title, .card-title, .panel-title, .appearance-label, .appearance-group-title, .theme-option, .customer-topbar-title, .owner-topbar-title, .owner-topbar-user-name, .customer-topbar-account .user-name) {
+    color: #e5e7eb !important;
+}
+
+body.dark-mode :is(small, .muted, .description, .section-subtitle, .appearance-description, .appearance-group-description, .customer-topbar-tagline, .customer-topbar-account .user-email, .owner-topbar-tagline, .owner-topbar-user-email) {
+    color: #aab2c0 !important;
+}
+
+body.dark-mode :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea) {
+    background-color: #202329 !important;
+    color: #e5e7eb !important;
+    border-color: #414750 !important;
+}
+
+body.dark-mode :is(table, thead, tbody, tr, th, td) {
+    background-color: #292d33 !important;
+    color: #e5e7eb !important;
+    border-color: #414750 !important;
+}
+
+body.dark-mode :is(button, .theme-option) {
+    color: #e5e7eb;
+}
+
+body.dark-mode :is(button:not(.btn-primary):not(.primary-button):not(.button-primary):not(.add-btn):not(.add-button):not(.btn-save):not(.submit-btn)) {
+    background-color: #30343a;
+    border-color: #484d55;
+}
+
+body.dark-mode :is(a:not(.sidebar a), .pagination a, .pagination-btn) {
+    color: #e5a0ad;
+}
+
+body.dark-mode .sidebar a.active {
+    color: #ffffff !important;
+}

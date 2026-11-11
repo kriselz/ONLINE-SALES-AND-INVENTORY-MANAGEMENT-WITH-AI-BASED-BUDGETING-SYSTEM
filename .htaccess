@@ -1,0 +1,5 @@
+Options -Indexes
+
+<FilesMatch "(?i)^(deployment-config\.php|capstone-mail\.env(?:\.txt)?|system\.sql|products\.csv|google_debug\.log|.*\.(?:sql|csv|log|phar|zip|pem))$">
+    Require all denied
+</FilesMatch>
